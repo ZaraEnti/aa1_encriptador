@@ -12,14 +12,14 @@ void main() {
 	if (file_w.is_open()) {
 		while (mensaje != "exit") {
 			getline(std::cin, mensaje);
-
 			if (mensaje != "exit") {
-				file_w << mensaje << std::endl;
+				file_w << mensaje; 
 			}
+			getline(std::cin, mensaje);
 			if (mensaje == "exit") {
 				//eliminar el salto de linea
 			}
-		}
+		}file_w << std::endl;
 		file_w.close();
 	}
 	else
@@ -49,6 +49,7 @@ void main() {
 					if (mensaje != "exit") {
 						file_w << mensaje << std::endl;
 					}
+					
 				}
 				file_w.close();
 			}
