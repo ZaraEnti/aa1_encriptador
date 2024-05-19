@@ -26,16 +26,16 @@ void main() {
 	{
 		std::cout << "Error: No se a podido abrir el archivo" << std::endl;
 	}
-	//2.Recuperar conversación
+	//2.Recuperar conversaciï¿½n
 	
 	std::ifstream file_r;
 
-	file_r.open("historial.txt");
+file_r.open("historial.txt");
 	
-	//Veritificación de la existencia
+	//Veritificaciï¿½n de la existencia
 	if (file_r){
 		char c;
-		std::cout << "¿Quieres recuperar el historial? (y/n)" << std::endl;
+		std::cout << "ï¿½Quieres recuperar el historial? (y/n)" << std::endl;
 		std::cin >> c;
 		
 		if (c=='n'||c=='N') {
@@ -60,7 +60,7 @@ void main() {
 		}
 		else if (c=='y'||c=='Y') {
 			mensaje = "";//reset del mensaje
-			//Se añade
+			//Se aï¿½ade
 			file_w.open("historial.txt", std::ios::app);
 			if (file_w.is_open()) {
 				while (mensaje != "exit") {
